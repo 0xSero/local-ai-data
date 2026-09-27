@@ -1,0 +1,102 @@
+{
+  "recipe": "qwen",
+  "started_utc": "2026-09-27T09:37:02.780221+00:00",
+  "phase": "finished",
+  "lab_exit": 0,
+  "audit": {
+    "passed": true,
+    "stream": {
+      "done": true,
+      "finish_reason": "stop"
+    },
+    "tokenizer_backed": true
+  },
+  "recipe_restored": false,
+  "draft_check": {
+    "api": null,
+    "expected_mtp": true,
+    "startup_marker": true,
+    "limitation": "Pinned Tabby model_info does not populate parameters.draft"
+  },
+  "finished_utc": "2026-09-27T09:39:15.626970+00:00",
+  "token_calls": [
+    {
+      "id": 3,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 4
+    },
+    {
+      "id": 6,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 8
+    },
+    {
+      "id": 7,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 288
+    },
+    {
+      "id": 9,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 16
+    },
+    {
+      "id": 10,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 227
+    },
+    {
+      "id": 12,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 13
+    },
+    {
+      "id": 13,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 46
+    },
+    {
+      "id": 15,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 35
+    },
+    {
+      "id": 16,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 104
+    },
+    {
+      "id": 18,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 52573
+    },
+    {
+      "id": 19,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 286
+    },
+    {
+      "id": 21,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 1573
+    },
+    {
+      "id": 22,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 2247
+    }
+  ]
+}

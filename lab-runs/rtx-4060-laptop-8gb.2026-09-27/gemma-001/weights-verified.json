@@ -1,0 +1,66 @@
+{
+  "repo": "turboderp/gemma-4-12B-it-exl3",
+  "revision": "38309570753c5fde71a818feb513b1e09a81fc18",
+  "verified_files": [
+    {
+      "filename": ".gitattributes",
+      "bytes": 1624,
+      "sha256": "c9aff01d02fd1b5f365056bc5360431b6fef35c3dd8b22bffa9cc27361b22062",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "README.md",
+      "bytes": 27867,
+      "sha256": "90fe018915b02f8a95fbb53ec75c9cb7bfe3b7c49ea232a79328a8854f988332",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "chat_template.jinja",
+      "bytes": 17466,
+      "sha256": "36e3a42e5cf14cd0020e72d92e1fdd9970f59b82170e421f0cbe1bb42bead3f0",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "config.json",
+      "bytes": 5484,
+      "sha256": "8b47033ed0b539e279b911dbb0e683b6b71c4c45b8521b0cab7c8803ae5fc1d4",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "generation_config.json",
+      "bytes": 260,
+      "sha256": "a8349d9bd64cc5841297fcb5002f0fdc4749c473c8f1b10ea337f9ce4ee7014e",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "model.safetensors",
+      "bytes": 6970957474,
+      "sha256": "210cb1bec5ebaf13e8e319d51d8e80d4295003b7201dba8a1d2b9a4686a71f44",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "processor_config.json",
+      "bytes": 1382,
+      "sha256": "6b938e76555b3e9946890770e1abcd442a4718f34041a58e8139dc8ad34545c9",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "quantization_config.json",
+      "bytes": 529849,
+      "sha256": "0a9661fe6fe825a37df0b0ca2010e89476fef795227fd492f975ff761cc00014",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "tokenizer.json",
+      "bytes": 32169626,
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+      "upstream_digest_matched": true
+    },
+    {
+      "filename": "tokenizer_config.json",
+      "bytes": 2102,
+      "sha256": "09e6222fd7049dae603d0f61a8b10af5a813f22dca10e6cdc6918f76d7661104",
+      "upstream_digest_matched": true
+    }
+  ]
+}

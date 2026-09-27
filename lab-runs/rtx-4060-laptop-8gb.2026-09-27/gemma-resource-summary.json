@@ -1,0 +1,969 @@
+{
+  "recipe": "gemma-4-12b.tabbyapi.32k",
+  "attempt": "gemma-001",
+  "source_files": [
+    "gemma-001/resources.jsonl",
+    "gemma-001/host.json",
+    "gemma-001/attempt.json",
+    "gemma-001/lab/http.jsonl",
+    "gemma-001/lab/stream-20.jsonl",
+    "gemma-001/lab/stream-20.sse"
+  ],
+  "methods": {
+    "samples": "Extrema and medians over recorded samples whose start timestamps fall inside each window; device-wide GPU readings include display/other allocations. No interpolation or extrapolation.",
+    "timing": "Same-host monotonic clocks. Context window is the recorded request/response pair. Speed window joins SSE byte offsets to receive timestamps, then matches the exact tokenizer sample body used by unchanged upstream lab. Receive timestamps precede tee writes and lab timing by a small unmeasured recorder overhead.",
+    "psi": "PSI total counters are cumulative microseconds. Reported deltas cover only first-to-last included resource samples; avg10 values are rolling 10-second percentages and can include preceding phases.",
+    "memory_peak": "Kernel memory.peak in final cgroup record is the whole-cgroup high-water mark, not a sampled maximum or a per-phase peak. Swap peak is sampled because memory.swap.peak was not recorded.",
+    "units": {
+      "gpu_memory": "MiB",
+      "gpu_power": "W",
+      "gpu_clocks": "MHz",
+      "gpu_temperature": "C",
+      "memory": "bytes",
+      "PSI_avg10": "percent"
+    },
+    "nominal_sample_interval_seconds": 2,
+    "actual_sample_gap_seconds": {
+      "samples": 81,
+      "min": 2.022233297000639,
+      "max": 3.5518093009886798,
+      "median": 2.030433080988587
+    }
+  },
+  "hardware": {
+    "kernel": "7.2.6-1-cachyos",
+    "architecture": "x86_64",
+    "cpu": "AMD Ryzen 9 8945HS w/ Radeon 780M Graphics",
+    "ac_online": "1",
+    "platform_profile": "performance"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "driver_version": "615.71.09",
+    "memory.total": 8188.0
+  },
+  "kernel_memory_peak_bytes": 5460754432,
+  "final_memory_events": {
+    "low": 0,
+    "high": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_kill": 0,
+    "oom_group_kill": 0,
+    "sock_throttled": 0
+  },
+  "docker_oom_killed": false,
+  "final_cgroup_psi": {
+    "some": {
+      "avg10": 0.0,
+      "avg60": 0.5,
+      "avg300": 0.62,
+      "total": 3205859
+    },
+    "full": {
+      "avg10": 0.0,
+      "avg60": 0.5,
+      "avg300": 0.62,
+      "total": 3203522
+    }
+  },
+  "speed_reconstruction": {
+    "sample_tokens": 720,
+    "whole_tokens": 1418,
+    "sample_span_seconds_approx": 30.00488234500517,
+    "sample_tps_approx": 23.996094759553568,
+    "source_stream_id": 20
+  },
+  "phases": {
+    "whole_attempt": {
+      "window_monotonic": [
+        104045.998981432,
+        104214.189224998
+      ],
+      "window_utc_approx": [
+        "2026-09-27T09:48:18.986082+00:00",
+        "2026-09-27T09:51:07.176326+00:00"
+      ],
+      "duration_seconds": 168.1902435660013,
+      "resource_samples": 82,
+      "resource_sample_monotonic": [
+        104045.998981432,
+        104214.189224998
+      ],
+      "gpu": {
+        "memory.total": {
+          "samples": 82,
+          "min": 8188.0,
+          "max": 8188.0,
+          "median": 8188.0
+        },
+        "memory.used": {
+          "samples": 82,
+          "min": 243.0,
+          "max": 6330.0,
+          "median": 6322.0
+        },
+        "utilization.gpu": {
+          "samples": 82,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 98.0
+        },
+        "temperature.gpu": {
+          "samples": 82,
+          "min": 55.0,
+          "max": 88.0,
+          "median": 82.0
+        },
+        "power.draw": {
+          "samples": 82,
+          "min": 1.55,
+          "max": 75.69,
+          "median": 62.995000000000005
+        },
+        "power.default_limit": {
+          "samples": 82,
+          "min": 55.0,
+          "max": 55.0,
+          "median": 55.0
+        },
+        "enforced.power.limit": {
+          "samples": 82,
+          "min": 51.23,
+          "max": 74.97,
+          "median": 67.31
+        },
+        "clocks.current.graphics": {
+          "samples": 82,
+          "min": 210.0,
+          "max": 2535.0,
+          "median": 1972.5
+        },
+        "clocks.current.memory": {
+          "samples": 82,
+          "min": 405.0,
+          "max": 8001.0,
+          "median": 8001.0
+        }
+      },
+      "gpu_pstates": [
+        "P0",
+        "P3",
+        "P8"
+      ],
+      "host_mem_available_bytes": {
+        "samples": 82,
+        "min": 2345762816,
+        "max": 5569019904,
+        "median": 3852609536.0
+      },
+      "host_swap_used_bytes": {
+        "samples": 82,
+        "min": 15353110528,
+        "max": 19457134592,
+        "median": 18020263936.0
+      },
+      "host_memory_psi": {
+        "some": {
+          "max_avg10_percent": 36.02,
+          "total_delta_seconds_between_samples": 10.092366
+        },
+        "full": {
+          "max_avg10_percent": 34.72,
+          "total_delta_seconds_between_samples": 9.773308
+        }
+      },
+      "cgroup": {
+        "memory.current_bytes": {
+          "samples": 80,
+          "min": 322736128,
+          "max": 5380022272,
+          "median": 1965125632.0
+        },
+        "memory.swap.current_bytes": {
+          "samples": 80,
+          "min": 0,
+          "max": 2955890688,
+          "median": 2582462464.0
+        },
+        "memory_max_bytes": [
+          8589934592
+        ],
+        "swap_max_bytes": [
+          8589934592
+        ],
+        "memory_events_first": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_events_last": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_psi": {
+          "some": {
+            "max_avg10_percent": 11.61,
+            "total_delta_seconds_between_samples": 3.205859
+          },
+          "full": {
+            "max_avg10_percent": 11.61,
+            "total_delta_seconds_between_samples": 3.203522
+          }
+        },
+        "stat_bytes": {
+          "anon": {
+            "samples": 80,
+            "min": 38985728,
+            "max": 3612004352,
+            "median": 1626871808.0
+          },
+          "file": {
+            "samples": 80,
+            "min": 238354432,
+            "max": 2385645568,
+            "median": 271327232.0
+          },
+          "kernel": {
+            "samples": 80,
+            "min": 4980736,
+            "max": 99917824,
+            "median": 94564352.0
+          },
+          "pagetables": {
+            "samples": 80,
+            "min": 172032,
+            "max": 11141120,
+            "median": 10100736.0
+          },
+          "sock": {
+            "samples": 80,
+            "min": 0,
+            "max": 0,
+            "median": 0.0
+          }
+        }
+      }
+    },
+    "lab": {
+      "window_monotonic": [
+        104086.812384136,
+        104210.251760925
+      ],
+      "window_utc_approx": [
+        "2026-09-27T09:48:59.799485+00:00",
+        "2026-09-27T09:51:03.238861+00:00"
+      ],
+      "duration_seconds": 123.43937678899965,
+      "resource_samples": 61,
+      "resource_sample_monotonic": [
+        104088.34037682,
+        104210.129185917
+      ],
+      "gpu": {
+        "memory.total": {
+          "samples": 61,
+          "min": 8188.0,
+          "max": 8188.0,
+          "median": 8188.0
+        },
+        "memory.used": {
+          "samples": 61,
+          "min": 6046.0,
+          "max": 6330.0,
+          "median": 6330.0
+        },
+        "utilization.gpu": {
+          "samples": 61,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 98.0
+        },
+        "temperature.gpu": {
+          "samples": 61,
+          "min": 65.0,
+          "max": 88.0,
+          "median": 85.0
+        },
+        "power.draw": {
+          "samples": 61,
+          "min": 17.66,
+          "max": 75.69,
+          "median": 68.48
+        },
+        "power.default_limit": {
+          "samples": 61,
+          "min": 55.0,
+          "max": 55.0,
+          "median": 55.0
+        },
+        "enforced.power.limit": {
+          "samples": 61,
+          "min": 57.01,
+          "max": 74.97,
+          "median": 69.2
+        },
+        "clocks.current.graphics": {
+          "samples": 61,
+          "min": 1740.0,
+          "max": 2535.0,
+          "median": 2010.0
+        },
+        "clocks.current.memory": {
+          "samples": 61,
+          "min": 7001.0,
+          "max": 8001.0,
+          "median": 8001.0
+        }
+      },
+      "gpu_pstates": [
+        "P0",
+        "P3"
+      ],
+      "host_mem_available_bytes": {
+        "samples": 61,
+        "min": 2345762816,
+        "max": 4519477248,
+        "median": 3044708352
+      },
+      "host_swap_used_bytes": {
+        "samples": 61,
+        "min": 17694240768,
+        "max": 19228192768,
+        "median": 18267721728
+      },
+      "host_memory_psi": {
+        "some": {
+          "max_avg10_percent": 25.69,
+          "total_delta_seconds_between_samples": 0.356851
+        },
+        "full": {
+          "max_avg10_percent": 24.74,
+          "total_delta_seconds_between_samples": 0.342887
+        }
+      },
+      "cgroup": {
+        "memory.current_bytes": {
+          "samples": 61,
+          "min": 1380036608,
+          "max": 2113355776,
+          "median": 1964314624
+        },
+        "memory.swap.current_bytes": {
+          "samples": 61,
+          "min": 2579529728,
+          "max": 2752110592,
+          "median": 2609352704
+        },
+        "memory_max_bytes": [
+          8589934592
+        ],
+        "swap_max_bytes": [
+          8589934592
+        ],
+        "memory_events_first": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_events_last": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_psi": {
+          "some": {
+            "max_avg10_percent": 7.88,
+            "total_delta_seconds_between_samples": 0.037664
+          },
+          "full": {
+            "max_avg10_percent": 7.88,
+            "total_delta_seconds_between_samples": 0.037665
+          }
+        },
+        "stat_bytes": {
+          "anon": {
+            "samples": 61,
+            "min": 907218944,
+            "max": 1662476288,
+            "median": 1627131904
+          },
+          "file": {
+            "samples": 61,
+            "min": 238354432,
+            "max": 1106337792,
+            "median": 240295936
+          },
+          "kernel": {
+            "samples": 61,
+            "min": 92442624,
+            "max": 97456128,
+            "median": 94507008
+          },
+          "pagetables": {
+            "samples": 61,
+            "min": 9740288,
+            "max": 11141120,
+            "median": 11128832
+          },
+          "sock": {
+            "samples": 61,
+            "min": 0,
+            "max": 0,
+            "median": 0
+          }
+        }
+      }
+    },
+    "context_request": {
+      "window_monotonic": [
+        104110.50872699,
+        104151.330827149
+      ],
+      "window_utc_approx": [
+        "2026-09-27T09:49:23.495828+00:00",
+        "2026-09-27T09:50:04.317928+00:00"
+      ],
+      "duration_seconds": 40.82210015899909,
+      "resource_samples": 21,
+      "resource_sample_monotonic": [
+        104110.614305606,
+        104151.219542957
+      ],
+      "gpu": {
+        "memory.total": {
+          "samples": 21,
+          "min": 8188.0,
+          "max": 8188.0,
+          "median": 8188.0
+        },
+        "memory.used": {
+          "samples": 21,
+          "min": 6322.0,
+          "max": 6330.0,
+          "median": 6322.0
+        },
+        "utilization.gpu": {
+          "samples": 21,
+          "min": 0.0,
+          "max": 100.0,
+          "median": 99.0
+        },
+        "temperature.gpu": {
+          "samples": 21,
+          "min": 74.0,
+          "max": 88.0,
+          "median": 85.0
+        },
+        "power.draw": {
+          "samples": 21,
+          "min": 41.95,
+          "max": 75.69,
+          "median": 69.1
+        },
+        "power.default_limit": {
+          "samples": 21,
+          "min": 55.0,
+          "max": 55.0,
+          "median": 55.0
+        },
+        "enforced.power.limit": {
+          "samples": 21,
+          "min": 57.52,
+          "max": 74.89,
+          "median": 70.81
+        },
+        "clocks.current.graphics": {
+          "samples": 21,
+          "min": 1770.0,
+          "max": 2490.0,
+          "median": 1995.0
+        },
+        "clocks.current.memory": {
+          "samples": 21,
+          "min": 8001.0,
+          "max": 8001.0,
+          "median": 8001.0
+        }
+      },
+      "gpu_pstates": [
+        "P0",
+        "P3"
+      ],
+      "host_mem_available_bytes": {
+        "samples": 21,
+        "min": 2782162944,
+        "max": 4287778816,
+        "median": 4164280320
+      },
+      "host_swap_used_bytes": {
+        "samples": 21,
+        "min": 18007371776,
+        "max": 18824519680,
+        "median": 18791895040
+      },
+      "host_memory_psi": {
+        "some": {
+          "max_avg10_percent": 2.87,
+          "total_delta_seconds_between_samples": 0.068828
+        },
+        "full": {
+          "max_avg10_percent": 2.76,
+          "total_delta_seconds_between_samples": 0.06799
+        }
+      },
+      "cgroup": {
+        "memory.current_bytes": {
+          "samples": 21,
+          "min": 1380036608,
+          "max": 1999327232,
+          "median": 1380454400
+        },
+        "memory.swap.current_bytes": {
+          "samples": 21,
+          "min": 2579976192,
+          "max": 2580467712,
+          "median": 2580430848
+        },
+        "memory_max_bytes": [
+          8589934592
+        ],
+        "swap_max_bytes": [
+          8589934592
+        ],
+        "memory_events_first": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_events_last": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_psi": {
+          "some": {
+            "max_avg10_percent": 0.92,
+            "total_delta_seconds_between_samples": 2.8e-05
+          },
+          "full": {
+            "max_avg10_percent": 0.92,
+            "total_delta_seconds_between_samples": 2.9e-05
+          }
+        },
+        "stat_bytes": {
+          "anon": {
+            "samples": 21,
+            "min": 1002196992,
+            "max": 1662476288,
+            "median": 1012760576
+          },
+          "file": {
+            "samples": 21,
+            "min": 238354432,
+            "max": 663572480,
+            "median": 271327232
+          },
+          "kernel": {
+            "samples": 21,
+            "min": 93388800,
+            "max": 96108544,
+            "median": 93401088
+          },
+          "pagetables": {
+            "samples": 21,
+            "min": 9846784,
+            "max": 11141120,
+            "median": 9867264
+          },
+          "sock": {
+            "samples": 21,
+            "min": 0,
+            "max": 0,
+            "median": 0
+          }
+        }
+      }
+    },
+    "timed_speed_window": {
+      "window_monotonic": [
+        104151.68616376,
+        104181.691046105
+      ],
+      "window_utc_approx": [
+        "2026-09-27T09:50:04.673264+00:00",
+        "2026-09-27T09:50:34.678147+00:00"
+      ],
+      "duration_seconds": 30.00488234500517,
+      "resource_samples": 15,
+      "resource_sample_monotonic": [
+        104153.249235754,
+        104181.677048852
+      ],
+      "gpu": {
+        "memory.total": {
+          "samples": 15,
+          "min": 8188.0,
+          "max": 8188.0,
+          "median": 8188.0
+        },
+        "memory.used": {
+          "samples": 15,
+          "min": 6330.0,
+          "max": 6330.0,
+          "median": 6330.0
+        },
+        "utilization.gpu": {
+          "samples": 15,
+          "min": 87.0,
+          "max": 98.0,
+          "median": 97.0
+        },
+        "temperature.gpu": {
+          "samples": 15,
+          "min": 81.0,
+          "max": 86.0,
+          "median": 83.0
+        },
+        "power.draw": {
+          "samples": 15,
+          "min": 57.22,
+          "max": 75.12,
+          "median": 65.72
+        },
+        "power.default_limit": {
+          "samples": 15,
+          "min": 55.0,
+          "max": 55.0,
+          "median": 55.0
+        },
+        "enforced.power.limit": {
+          "samples": 15,
+          "min": 57.52,
+          "max": 74.97,
+          "median": 66.5
+        },
+        "clocks.current.graphics": {
+          "samples": 15,
+          "min": 1740.0,
+          "max": 2130.0,
+          "median": 1995.0
+        },
+        "clocks.current.memory": {
+          "samples": 15,
+          "min": 8001.0,
+          "max": 8001.0,
+          "median": 8001.0
+        }
+      },
+      "gpu_pstates": [
+        "P0"
+      ],
+      "host_mem_available_bytes": {
+        "samples": 15,
+        "min": 2345762816,
+        "max": 2602016768,
+        "median": 2528002048
+      },
+      "host_swap_used_bytes": {
+        "samples": 15,
+        "min": 17694240768,
+        "max": 17773682688,
+        "median": 17722855424
+      },
+      "host_memory_psi": {
+        "some": {
+          "max_avg10_percent": 0.19,
+          "total_delta_seconds_between_samples": 0.078748
+        },
+        "full": {
+          "max_avg10_percent": 0.19,
+          "total_delta_seconds_between_samples": 0.078183
+        }
+      },
+      "cgroup": {
+        "memory.current_bytes": {
+          "samples": 15,
+          "min": 1963294720,
+          "max": 1994821632,
+          "median": 1965572096
+        },
+        "memory.swap.current_bytes": {
+          "samples": 15,
+          "min": 2579529728,
+          "max": 2610061312,
+          "median": 2609856512
+        },
+        "memory_max_bytes": [
+          8589934592
+        ],
+        "swap_max_bytes": [
+          8589934592
+        ],
+        "memory_events_first": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_events_last": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_psi": {
+          "some": {
+            "max_avg10_percent": 0.01,
+            "total_delta_seconds_between_samples": 0.0
+          },
+          "full": {
+            "max_avg10_percent": 0.01,
+            "total_delta_seconds_between_samples": 0.0
+          }
+        },
+        "stat_bytes": {
+          "anon": {
+            "samples": 15,
+            "min": 1626796032,
+            "max": 1657049088,
+            "median": 1627942912
+          },
+          "file": {
+            "samples": 15,
+            "min": 239837184,
+            "max": 240316416,
+            "median": 240295936
+          },
+          "kernel": {
+            "samples": 15,
+            "min": 92450816,
+            "max": 94588928,
+            "median": 94568448
+          },
+          "pagetables": {
+            "samples": 15,
+            "min": 11128832,
+            "max": 11128832,
+            "median": 11128832
+          },
+          "sock": {
+            "samples": 15,
+            "min": 0,
+            "max": 0,
+            "median": 0
+          }
+        }
+      }
+    },
+    "whole_speed_request": {
+      "window_monotonic": [
+        104151.37552462,
+        104210.198464974
+      ],
+      "window_utc_approx": [
+        "2026-09-27T09:50:04.362625+00:00",
+        "2026-09-27T09:51:03.185566+00:00"
+      ],
+      "duration_seconds": 58.82294035400264,
+      "resource_samples": 29,
+      "resource_sample_monotonic": [
+        104153.249235754,
+        104210.129185917
+      ],
+      "gpu": {
+        "memory.total": {
+          "samples": 29,
+          "min": 8188.0,
+          "max": 8188.0,
+          "median": 8188.0
+        },
+        "memory.used": {
+          "samples": 29,
+          "min": 6330.0,
+          "max": 6330.0,
+          "median": 6330.0
+        },
+        "utilization.gpu": {
+          "samples": 29,
+          "min": 87.0,
+          "max": 98.0,
+          "median": 98.0
+        },
+        "temperature.gpu": {
+          "samples": 29,
+          "min": 81.0,
+          "max": 87.0,
+          "median": 86.0
+        },
+        "power.draw": {
+          "samples": 29,
+          "min": 57.22,
+          "max": 75.12,
+          "median": 70.32
+        },
+        "power.default_limit": {
+          "samples": 29,
+          "min": 55.0,
+          "max": 55.0,
+          "median": 55.0
+        },
+        "enforced.power.limit": {
+          "samples": 29,
+          "min": 57.52,
+          "max": 74.97,
+          "median": 70.45
+        },
+        "clocks.current.graphics": {
+          "samples": 29,
+          "min": 1740.0,
+          "max": 2205.0,
+          "median": 2040.0
+        },
+        "clocks.current.memory": {
+          "samples": 29,
+          "min": 8001.0,
+          "max": 8001.0,
+          "median": 8001.0
+        }
+      },
+      "gpu_pstates": [
+        "P0"
+      ],
+      "host_mem_available_bytes": {
+        "samples": 29,
+        "min": 2345762816,
+        "max": 2766069760,
+        "median": 2593980416
+      },
+      "host_swap_used_bytes": {
+        "samples": 29,
+        "min": 17694240768,
+        "max": 17869967360,
+        "median": 17755389952
+      },
+      "host_memory_psi": {
+        "some": {
+          "max_avg10_percent": 0.19,
+          "total_delta_seconds_between_samples": 0.220692
+        },
+        "full": {
+          "max_avg10_percent": 0.19,
+          "total_delta_seconds_between_samples": 0.209834
+        }
+      },
+      "cgroup": {
+        "memory.current_bytes": {
+          "samples": 29,
+          "min": 1963294720,
+          "max": 1994821632,
+          "median": 1965518848
+        },
+        "memory.swap.current_bytes": {
+          "samples": 29,
+          "min": 2579529728,
+          "max": 2610061312,
+          "median": 2609717248
+        },
+        "memory_max_bytes": [
+          8589934592
+        ],
+        "swap_max_bytes": [
+          8589934592
+        ],
+        "memory_events_first": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_events_last": {
+          "low": 0,
+          "high": 0,
+          "max": 0,
+          "oom": 0,
+          "oom_kill": 0,
+          "oom_group_kill": 0,
+          "sock_throttled": 0
+        },
+        "memory_psi": {
+          "some": {
+            "max_avg10_percent": 0.01,
+            "total_delta_seconds_between_samples": 0.0
+          },
+          "full": {
+            "max_avg10_percent": 0.01,
+            "total_delta_seconds_between_samples": 0.0
+          }
+        },
+        "stat_bytes": {
+          "anon": {
+            "samples": 29,
+            "min": 1626796032,
+            "max": 1657049088,
+            "median": 1629134848
+          },
+          "file": {
+            "samples": 29,
+            "min": 239837184,
+            "max": 240316416,
+            "median": 239927296
+          },
+          "kernel": {
+            "samples": 29,
+            "min": 92442624,
+            "max": 94588928,
+            "median": 92450816
+          },
+          "pagetables": {
+            "samples": 29,
+            "min": 11128832,
+            "max": 11128832,
+            "median": 11128832
+          },
+          "sock": {
+            "samples": 29,
+            "min": 0,
+            "max": 0,
+            "median": 0
+          }
+        }
+      }
+    }
+  },
+  "sample_errors": []
+}

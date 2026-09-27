@@ -1,0 +1,25 @@
+{
+  "kernel": "7.2.6-1-cachyos",
+  "architecture": "x86_64",
+  "os_release": "NAME=\"CachyOS Linux\"\nPRETTY_NAME=\"CachyOS\"\nID=cachyos\nID_LIKE=arch\nBUILD_ID=rolling\nANSI_COLOR=\"38;2;23;147;209\"\nHOME_URL=\"https://cachyos.org/\"\nDOCUMENTATION_URL=\"https://wiki.cachyos.org/\"\nSUPPORT_URL=\"https://discuss.cachyos.org/\"\nBUG_REPORT_URL=\"https://github.com/cachyos\"\nPRIVACY_POLICY_URL=\"https://terms.archlinux.org/docs/privacy-policy/\"\nLOGO=cachyos\n",
+  "cpu": "AMD Ryzen 9 8945HS w/ Radeon 780M Graphics",
+  "ac_online": "1",
+  "platform_profile": "performance",
+  "memory_limit_bytes": 8589934592,
+  "memory_plus_swap_limit_bytes": 17179869184,
+  "gpu_csv_fields": [
+    "name",
+    "driver_version",
+    "memory.total",
+    "memory.used",
+    "utilization.gpu",
+    "temperature.gpu",
+    "power.draw",
+    "power.default_limit",
+    "enforced.power.limit",
+    "clocks.current.graphics",
+    "clocks.current.memory",
+    "pstate"
+  ],
+  "resource_sample_interval_seconds": 2
+}

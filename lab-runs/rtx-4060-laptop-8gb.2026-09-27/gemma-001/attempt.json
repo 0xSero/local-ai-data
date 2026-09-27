@@ -1,0 +1,37 @@
+{
+  "model": "gemma",
+  "lab_started": true,
+  "lab_exit_code": 0,
+  "container_state_before_stop": {
+    "Status": "running",
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": "<host-pid>",
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-09-27T09:48:19.69204178Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "cgroup_final": {
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+    "memory.peak": "5460754432\n",
+    "memory.swap.current": "2603634688\n",
+    "memory.pressure": "some avg10=0.00 avg60=0.50 avg300=0.62 total=3205859\nfull avg10=0.00 avg60=0.50 avg300=0.62 total=3203522\n"
+  },
+  "container_state_after_stop": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": "<host-pid>",
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-09-27T09:48:19.69204178Z",
+    "FinishedAt": "2026-09-27T09:51:06.989406942Z"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Id": "sha256:0f83e6198dc3be2561652d8df2525a7d1a69733e12fc8e25cbc5bc319a8a3ad1",
+  "RepoDigests": [
+    "ghcr.io/0xsero/tabbyapi-exl3@sha256:0f83e6198dc3be2561652d8df2525a7d1a69733e12fc8e25cbc5bc319a8a3ad1"
+  ],
+  "Size": 14844859191,
+  "Architecture": "amd64",
+  "Os": "linux",
+  "Created": "2026-09-22T16:27:37.444653054Z",
+  "oci_labels": {
+    "org.opencontainers.image.revision": "f07131cd8fe34e449fe87cdd3a066b52b96d3cac",
+    "org.opencontainers.image.source": "https://github.com/theroyallab/tabbyAPI",
+    "org.opencontainers.image.version": "cu13"
+  }
+}
