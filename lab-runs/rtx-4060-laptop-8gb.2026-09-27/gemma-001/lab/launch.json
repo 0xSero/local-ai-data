@@ -1,0 +1,80 @@
+{
+  "argv": [
+    "<REGISTRY>/lab/lab.py",
+    "try",
+    "turboderp/gemma-4-12B-it-exl3@38309570753c5fde71a818feb513b1e09a81fc18",
+    "--model",
+    "gemma-4-12b",
+    "--engine",
+    "tabbyapi-exl3@0f83e6198dc3",
+    "--card",
+    "rtx-4060-laptop-8gb",
+    "--on",
+    "endpoint",
+    "--endpoint",
+    "http://127.0.0.1:18089",
+    "--gpu",
+    "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "--set",
+    "vision=true",
+    "--set",
+    "tools=null",
+    "--set",
+    "vars={enable_thinking: true}"
+  ],
+  "source_sha256": {
+    "lab/lab.py": "59832ef8b15c4677354dd8d7d7fdb6b273c803ed51eaaa6af772d540680c1143",
+    "registry/engines/tabbyapi-exl3.json": "92d4e012c911fc5c1787a887330203e6b7d3d450ebca24938de18e8c657f73e3"
+  },
+  "recipe": {
+    "model": "gemma-4-12b",
+    "weights": "turboderp/gemma-4-12B-it-exl3@38309570753c5fde71a818feb513b1e09a81fc18",
+    "engine": "tabbyapi-exl3@0f83e6198dc3",
+    "set": {
+      "vision": true,
+      "tools": "null",
+      "vars": "{enable_thinking: true}"
+    },
+    "card": "rtx-4060-laptop-8gb",
+    "proof": [
+      {
+        "at": "2026-09-26",
+        "on": "vast",
+        "gpu": "RTX 4060",
+        "gates": "load chat reasoning tools context speed",
+        "tps": 31.3,
+        "prefill": 661,
+        "served": "gemma-4-12B-it-exl3-38309570",
+        "log": "sha256:dd76c36fda49e7ab",
+        "proxy": "rtx-4060-8gb"
+      }
+    ]
+  },
+  "launch": {
+    "image": "ghcr.io/0xsero/tabbyapi-exl3@sha256:0f83e6198dc3be2561652d8df2525a7d1a69733e12fc8e25cbc5bc319a8a3ad1",
+    "entrypoint": "/opt/venv/bin/python3",
+    "args": [
+      "main.py",
+      "--config",
+      "/app/config.yml"
+    ],
+    "port": 5000,
+    "shm": "8g",
+    "env": {},
+    "weights": {
+      "repo": "turboderp/gemma-4-12B-it-exl3",
+      "revision": "38309570753c5fde71a818feb513b1e09a81fc18",
+      "at": "/workspace/models/gemma-4-12B-it-exl3-38309570"
+    },
+    "config": {
+      "at": "/app/config.yml",
+      "text": "network: {host: 0.0.0.0, port: 5000, disable_auth: true, disable_fetch_requests: true, send_tracebacks: false, api_servers: [OAI], sse_ping_interval: 15}\nlogging: {log_prompt: false, log_generation_params: false, log_requests: false, log_chat_completion_requests: false}\nmodel:\n  model_dir: /workspace/models\n  model_name: gemma-4-12B-it-exl3-38309570\n  backend: exllamav3\n  inline_model_loading: false\n  max_seq_len: 32768\n  cache_size: 33792\n  cache_mode: Q4\n  tensor_parallel: false\n  gpu_split_auto: true\n  autosplit_reserve: [256]\n  chunk_size: 2048\n  output_chunking: true\n  max_batch_size: 1\n  vision: true\n  reasoning: true\n  start_in_reasoning: auto\n  tool_format: null\n  template_vars_default: {enable_thinking: true}\ndraft_model: {}\nmemory: {sysmem_recurrent_cache: 4096, sysmem_kv_cache: 0, cuda_malloc_async: true}\n",
+      "sha256": "54489831a168a6e5ca324558ab7ba89bee362efef1a5eed0491ae95719f2ec57"
+    },
+    "ctx": 32768,
+    "seqs": 1,
+    "vision": true,
+    "backend": "nvidia",
+    "min_cuda": 13.2
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "recipe": "gemma",
+  "started_utc": "2026-09-27T09:48:59.745285+00:00",
+  "phase": "finished",
+  "lab_exit": 0,
+  "audit": {
+    "passed": true,
+    "stream": {
+      "done": true,
+      "finish_reason": "stop"
+    },
+    "tokenizer_backed": true
+  },
+  "recipe_restored": false,
+  "draft_check": {
+    "api": null,
+    "expected_mtp": false,
+    "startup_marker": false,
+    "limitation": "Pinned Tabby model_info does not populate parameters.draft"
+  },
+  "finished_utc": "2026-09-27T09:51:03.250033+00:00",
+  "token_calls": [
+    {
+      "id": 3,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 5
+    },
+    {
+      "id": 6,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 9
+    },
+    {
+      "id": 7,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 144
+    },
+    {
+      "id": 9,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 17
+    },
+    {
+      "id": 10,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 124
+    },
+    {
+      "id": 12,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 15
+    },
+    {
+      "id": 13,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 34
+    },
+    {
+      "id": 15,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 38
+    },
+    {
+      "id": 16,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 18
+    },
+    {
+      "id": 18,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 25731
+    },
+    {
+      "id": 19,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 74
+    },
+    {
+      "id": 21,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 720
+    },
+    {
+      "id": 22,
+      "path": "/v1/token/encode",
+      "valid": true,
+      "length": 1418
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "tabbyAPI": "0.0.1",
+  "exllamav3": "1.5.1+cu132.torch2.11.0",
+  "flash-linear-attention": "0.5.2",
+  "torch": "2.11.0+cu130",
+  "transformers": "5.17.0"
+}

@@ -1,0 +1,37 @@
+{
+  "model": "qwen",
+  "lab_started": true,
+  "lab_exit_code": 0,
+  "container_state_before_stop": {
+    "Status": "running",
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": "<host-pid>",
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-09-27T09:36:05.585573926Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "cgroup_final": {
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+    "memory.peak": "4278075392\n",
+    "memory.swap.current": "2797584384\n",
+    "memory.pressure": "some avg10=0.00 avg60=0.25 avg300=0.39 total=2213698\nfull avg10=0.00 avg60=0.25 avg300=0.39 total=2212524\n"
+  },
+  "container_state_after_stop": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": "<host-pid>",
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-09-27T09:36:05.585573926Z",
+    "FinishedAt": "2026-09-27T09:39:19.224440707Z"
+  }
+}

@@ -1,0 +1,71 @@
+2026-09-27T09:36:06.857643298Z 09:36:06.856 INFO:     Using config file /app/config.yml
+2026-09-27T09:36:06.864277033Z 09:36:06.863 INFO:     Configured backend: cudaMallocAsync
+2026-09-27T09:36:09.112954041Z 09:36:09.112 WARNING:  No sampler override preset is configured
+2026-09-27T09:36:09.112970602Z                        (sampling.override_preset), so sampling parameters have
+2026-09-27T09:36:09.112974460Z                        no fallback values. Requests that omit them run
+2026-09-27T09:36:09.112977545Z                        untruncated: temperature 1.0, top_k 0, top_p 1.0, min_p
+2026-09-27T09:36:09.112980321Z                        0. Set override_preset to safe_defaults unless this is
+2026-09-27T09:36:09.112983196Z                        intentional.
+2026-09-27T09:36:09.117687872Z 09:36:09.117 WARNING:  Generation config file not found in model directory,
+2026-09-27T09:36:09.117697931Z                        skipping.
+2026-09-27T09:36:09.119019224Z 09:36:09.118 INFO:     exllamav3 version: 1.5.1
+2026-09-27T09:36:10.121689533Z 09:36:10.121 INFO:     The provided model has vision capabilities, vision is
+2026-09-27T09:36:10.121705974Z                        disabled in config.
+2026-09-27T09:36:10.122045404Z 09:36:10.121 INFO:     Using main model MTP component for drafting
+2026-09-27T09:36:10.122245532Z 09:36:10.122 INFO:     Disabling GPU split because one GPU is in use.
+2026-09-27T09:36:10.122599038Z 09:36:10.122 INFO:     Context: max_seq_len 65,536 tokens (configured),
+2026-09-27T09:36:10.122607134Z                        cache_size 66,560 tokens
+2026-09-27T09:36:10.149976932Z 09:36:10.149 INFO:     Using template "chat_template" for chat completions.
+2026-09-27T09:36:10.150415119Z 09:36:10.149 INFO:     Response parsing: tool format qwen3_coder (config),
+2026-09-27T09:36:10.150423384Z                        reasoning tags <think> </think> (template)
+2026-09-27T09:36:10.917880851Z 09:36:10.917 INFO:     Loading model /workspace/models/Qwen3.5-9B-exl3-22ef1303
+2026-09-27T09:36:10.917900718Z                        (manual GPU split)
+2026-09-27T09:37:00.511347465Z Loading draft modules ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 3/3   0:00:00
+2026-09-27T09:37:00.511416596Z Loading model modules ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 35/35 0:00:00
+2026-09-27T09:37:01.016265305Z 09:37:01.014 INFO:     Model loaded in 50.9 s
+2026-09-27T09:37:01.016369151Z 
+2026-09-27T09:37:01.016917205Z 09:37:01.016 WARNING:  Disabling authentication makes your instance vulnerable.
+2026-09-27T09:37:01.016922956Z                        Set the `disable_auth` flag to False in config.yml if you
+2026-09-27T09:37:01.016926072Z                        want to share this instance with others.
+2026-09-27T09:37:01.017610213Z 09:37:01.016 WARNING:  With authentication disabled and `allowed_origins` left
+2026-09-27T09:37:01.017627505Z                        at ["*"], any website open in a browser on this machine
+2026-09-27T09:37:01.017642654Z                        can send requests to this instance and read the
+2026-09-27T09:37:01.017645189Z                        responses, including admin endpoints. Set
+2026-09-27T09:37:01.017648124Z                        `network.allowed_origins` to your own frontends (or [])
+2026-09-27T09:37:01.017650389Z                        unless you use a browser-based frontend that needs it.
+2026-09-27T09:37:01.018332966Z 09:37:01.017 INFO:     Serving OAI API on http://0.0.0.0:5000 (docs at
+2026-09-27T09:37:01.018336613Z                        http://0.0.0.0:5000/redoc)
+2026-09-27T09:37:02.829440720Z 09:37:02.828 INFO:     #6 chat/completions: 18 prompt tokens · temperature: 0.6
+2026-09-27T09:37:02.829456840Z                        (req), max_tokens: 65517 (auto)
+2026-09-27T09:37:19.745065203Z 09:37:19.743 INFO:     #6 chat/completions: 291 tokens generated at 26.9 T/s ·
+2026-09-27T09:37:19.745196711Z                        prompt 18 tokens, none cached, 18 new in 6.08 s · first
+2026-09-27T09:37:19.745202071Z                        token 6.08 s, total 16.9 s · draft 207/336 accepted (62%)
+2026-09-27T09:37:19.761959897Z 09:37:19.761 INFO:     #9 chat/completions: 26 prompt tokens · temperature: 0.6
+2026-09-27T09:37:19.761980265Z                        (req), max_tokens: 65509 (auto)
+2026-09-27T09:37:22.731204723Z 09:37:22.730 INFO:     #9 chat/completions: 230 tokens generated at 79.2 T/s ·
+2026-09-27T09:37:22.731220071Z                        prompt 26 tokens, none cached, 26 new in 0.06 s · first
+2026-09-27T09:37:22.731223137Z                        token 0.06 s, total 2.96 s · draft 174/224 accepted (78%)
+2026-09-27T09:37:22.744550622Z 09:37:22.743 INFO:     #12 chat/completions: 280 prompt tokens · temperature:
+2026-09-27T09:37:22.744568676Z                        0.6 (req), max_tokens: 65255 (auto)
+2026-09-27T09:37:25.506420212Z 09:37:25.505 INFO:     #12 chat/completions: parsed 1 tool call (qwen3_coder)
+2026-09-27T09:37:25.507581012Z 09:37:25.506 INFO:     #12 chat/completions: 74 tokens generated at 83.0 T/s ·
+2026-09-27T09:37:25.507589227Z                        prompt 280 tokens, none cached, 280 new in 1.86 s (151
+2026-09-27T09:37:25.507749269Z                        T/s) · first token 1.86 s, total 2.75 s · draft 56/72
+2026-09-27T09:37:25.507751844Z                        accepted (78%)
+2026-09-27T09:37:25.514623258Z 09:37:25.514 INFO:     #15 chat/completions: 344 prompt tokens · temperature:
+2026-09-27T09:37:25.514636132Z                        0.6 (req), max_tokens: 65191 (auto)
+2026-09-27T09:37:28.062722739Z 09:37:28.061 INFO:     #15 chat/completions: 107 tokens generated at 73.4 T/s ·
+2026-09-27T09:37:28.062738979Z                        prompt 344 tokens, 74% cached, 88 new in 1.07 s · first
+2026-09-27T09:37:28.062742656Z                        token 1.08 s, total 2.54 s · draft 79/112 accepted (71%)
+2026-09-27T09:37:28.147254058Z 09:37:28.146 INFO:     #18 chat/completions: 52,583 prompt tokens · temperature:
+2026-09-27T09:37:28.147280337Z                        0.6 (req), max_tokens: 12952 (auto)
+2026-09-27T09:38:27.935430674Z 09:38:27.934 INFO:     #18 chat/completions: 289 tokens generated at 53.4 T/s ·
+2026-09-27T09:38:27.935450762Z                        prompt 52,583 tokens, none cached, 52,583 new in 54.4 s
+2026-09-27T09:38:27.935454208Z                        (967 T/s) · first token 54.4 s, total 59.8 s · draft
+2026-09-27T09:38:27.935457023Z                        209/320 accepted (65%)
+2026-09-27T09:38:28.050695441Z 09:38:28.049 INFO:     #21 chat/completions (stream): 25 prompt tokens ·
+2026-09-27T09:38:28.050712443Z                        temperature: 0.8 (req), max_tokens: 65510 (auto)
+2026-09-27T09:39:15.592368431Z 09:39:15.590 INFO:     #21 chat/completions (stream): 2,250 tokens generated at
+2026-09-27T09:39:15.592469612Z                        47.4 T/s · prompt 25 tokens, none cached, 25 new in 0.05
+2026-09-27T09:39:15.592485001Z                        s · first token 0.05 s, total 47.5 s · draft 1325/3700
+2026-09-27T09:39:15.592488708Z                        accepted (36%)

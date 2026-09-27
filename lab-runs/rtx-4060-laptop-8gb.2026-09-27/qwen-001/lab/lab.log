@@ -1,0 +1,2 @@
+[lab 15:09:15] gates: {'load': True, 'chat': True, 'reasoning': True, 'tools': True, 'context': True, 'speed': True}  decode 52.4 tok/s, prefill 878 tok/s; evidence lab/runs/rtx-4060-laptop-8gb.qwen3.5-9b.tabbyapi-exl3.64k.20260927T093915.json
+[lab 15:09:15] PASSED: wrote registry/recipes/nvidia/rtx-4060-laptop-8gb/qwen3.5-9b.tabbyapi.64k.json (649 bytes)

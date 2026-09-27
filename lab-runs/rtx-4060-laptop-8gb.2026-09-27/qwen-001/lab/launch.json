@@ -1,0 +1,77 @@
+{
+  "argv": [
+    "<REGISTRY>/lab/lab.py",
+    "try",
+    "TheMelonGod/Qwen3.5-9B-exl3@22ef1303062e0f6d0b282440f8c1f685947f4938",
+    "--model",
+    "qwen3.5-9b",
+    "--engine",
+    "tabbyapi-exl3@0f83e6198dc3",
+    "--card",
+    "rtx-4060-laptop-8gb",
+    "--on",
+    "endpoint",
+    "--endpoint",
+    "http://127.0.0.1:18089",
+    "--gpu",
+    "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "--set",
+    "ctx=65536",
+    "--set",
+    "draft=mtp"
+  ],
+  "source_sha256": {
+    "lab/lab.py": "59832ef8b15c4677354dd8d7d7fdb6b273c803ed51eaaa6af772d540680c1143",
+    "registry/engines/tabbyapi-exl3.json": "92d4e012c911fc5c1787a887330203e6b7d3d450ebca24938de18e8c657f73e3"
+  },
+  "recipe": {
+    "model": "qwen3.5-9b",
+    "weights": "TheMelonGod/Qwen3.5-9B-exl3@22ef1303062e0f6d0b282440f8c1f685947f4938",
+    "engine": "tabbyapi-exl3@0f83e6198dc3",
+    "set": {
+      "ctx": 65536,
+      "draft": "mtp"
+    },
+    "card": "rtx-4060-laptop-8gb",
+    "proof": [
+      {
+        "at": "2026-09-25",
+        "on": "vast",
+        "gpu": "RTX 4060",
+        "gates": "load chat reasoning tools context speed",
+        "tps": 55.2,
+        "prefill": 927,
+        "served": "Qwen3.5-9B-exl3-22ef1303",
+        "log": "sha256:e756471441fc5bce",
+        "proxy": "rtx-4060-8gb"
+      }
+    ]
+  },
+  "launch": {
+    "image": "ghcr.io/0xsero/tabbyapi-exl3@sha256:0f83e6198dc3be2561652d8df2525a7d1a69733e12fc8e25cbc5bc319a8a3ad1",
+    "entrypoint": "/opt/venv/bin/python3",
+    "args": [
+      "main.py",
+      "--config",
+      "/app/config.yml"
+    ],
+    "port": 5000,
+    "shm": "8g",
+    "env": {},
+    "weights": {
+      "repo": "TheMelonGod/Qwen3.5-9B-exl3",
+      "revision": "22ef1303062e0f6d0b282440f8c1f685947f4938",
+      "at": "/workspace/models/Qwen3.5-9B-exl3-22ef1303"
+    },
+    "config": {
+      "at": "/app/config.yml",
+      "text": "network: {host: 0.0.0.0, port: 5000, disable_auth: true, disable_fetch_requests: true, send_tracebacks: false, api_servers: [OAI], sse_ping_interval: 15}\nlogging: {log_prompt: false, log_generation_params: false, log_requests: false, log_chat_completion_requests: false}\nmodel:\n  model_dir: /workspace/models\n  model_name: Qwen3.5-9B-exl3-22ef1303\n  backend: exllamav3\n  inline_model_loading: false\n  max_seq_len: 65536\n  cache_size: 66560\n  cache_mode: Q4\n  tensor_parallel: false\n  gpu_split_auto: true\n  autosplit_reserve: [256]\n  chunk_size: 2048\n  output_chunking: true\n  max_batch_size: 1\n  vision: false\n  reasoning: true\n  start_in_reasoning: auto\n  tool_format: qwen3_coder\n  template_vars_default: {}\ndraft_model: {draft_mode: mtp}\nmemory: {sysmem_recurrent_cache: 4096, sysmem_kv_cache: 0, cuda_malloc_async: true}\n",
+      "sha256": "9e3354d054f24e4df647a19e8a39666cfd891041ba56d93213fbbb3bac9937bd"
+    },
+    "ctx": 65536,
+    "seqs": 1,
+    "vision": false,
+    "backend": "nvidia",
+    "min_cuda": 13.2
+  }
+}
