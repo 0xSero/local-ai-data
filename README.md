@@ -1,3 +1,5 @@
+> **Retired 2026-09-30.** This data lives on in [local-ai-registry](https://github.com/0xSero/local-ai-registry) under `data/`. This repo is archived and read-only.
+
 # Local AI Registry
 
 To add or validate records, see [CONTRIBUTING.md](CONTRIBUTING.md). The GPUs Omarchy's Local AI runs a model on, one page each, are in [supported/](supported/README.md).
